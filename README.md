@@ -28,7 +28,7 @@
 
 ## 📸 Screenshots
 
-I have attached the sample screen shots of the graphQL api for reference
+I have attached the sample screen shots of the app for reference
 
 ### Customer Add
 ![Customer Add](Customer%20Add.png)
