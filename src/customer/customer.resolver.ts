@@ -43,6 +43,6 @@ export class CustomerResolver {
   @ResolveField(() => [Shipment], { nullable: true })
   shipments(@Parent() customer: Customer): Promise<Shipment[]> {
     const { id } = customer;
-    return this.shipmentService.findByCustomerId(id); // Fetch shipments for this customer
+    return this.shipmentService.findByCustomerId(id); 
   }
 }

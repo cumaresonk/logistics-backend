@@ -8,9 +8,9 @@ import { Shipment } from 'src/shipment/shipment.entity';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([Customer, Shipment]), // Include Shipment here
+    TypeOrmModule.forFeature([Customer, Shipment]), 
   ],
-  providers: [CustomerService, CustomerResolver, ShipmentService], // ShipmentService doesn't need Shipment directly
+  providers: [CustomerService, CustomerResolver, ShipmentService], 
   exports: [CustomerService],
 })
 export class CustomerModule {}

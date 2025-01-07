@@ -55,7 +55,6 @@ export class ShipmentResolver {
     });
 
     return this.shipmentRepository.save(shipment);
-  //  return this.shipmentService.create(createShipmentInput);
   }
 
   @Mutation(() => Shipment)
