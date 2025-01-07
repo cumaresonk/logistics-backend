@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true, // Set to true for better type safety
+    "noImplicitAny": true,    // Set to true for stricter typing
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": true, // It's a good practice to enable it
+    "noFallthroughCasesInSwitch": true, // Enable this to catch fall-through errors in switch cases
+    "include": [
+      "src/**/*.ts"
+    ],
+ 
+  }
+}

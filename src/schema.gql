@@ -1,0 +1,85 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Driver {
+  id: String!
+  name: String!
+  vehicle: String!
+  shipments: [Shipment!]
+}
+
+type Shipment {
+  id: String!
+  origin: String!
+  destination: String!
+  status: String!
+  driver: Driver!
+  customer: Customer!
+}
+
+type Customer {
+  id: String!
+  name: String!
+  location: String!
+  shipments: [Shipment!]
+}
+
+type Query {
+  customers: [Customer!]!
+  customer(id: String!): Customer!
+  getAllShipments: [Shipment!]!
+  drivers: [Driver!]!
+  driver(id: String!): Driver!
+}
+
+type Mutation {
+  createCustomer(createCustomerInput: CreateCustomerInput!): Customer!
+  updateCustomer(updateCustomerInput: UpdateCustomerInput!): Customer!
+  removeCustomer(id: String!): Boolean!
+  createShipment(createShipmentInput: CreateShipmentInput!): Shipment!
+  updateShipment(updateShipmentInput: UpdateShipmentInput!): Shipment!
+  deleteShipment(id: String!): Boolean!
+  createDriver(createDriverInput: CreateDriverInput!): Driver!
+  updateDriver(updateDriverInput: UpdateDriverInput!): Driver!
+  removeDriver(id: String!): Boolean!
+}
+
+input CreateCustomerInput {
+  name: String!
+  location: String!
+}
+
+input UpdateCustomerInput {
+  name: String
+  location: String
+  id: String!
+}
+
+input CreateShipmentInput {
+  origin: String!
+  destination: String!
+  status: String!
+  driverId: String!
+  customerId: String!
+}
+
+input UpdateShipmentInput {
+  origin: String
+  destination: String
+  status: String
+  driverId: String
+  customerId: String
+  id: String!
+}
+
+input CreateDriverInput {
+  name: String!
+  vehicle: String!
+}
+
+input UpdateDriverInput {
+  name: String
+  vehicle: String
+  id: String!
+}
